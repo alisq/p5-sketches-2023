@@ -2,19 +2,13 @@ let c;
 
 function setup() {
     c = createCanvas(1000,1000)
-    //  background(0)
-    //rect(100,100,50,300)
-    //ellipse(400, 200, 500)
+
 
 }
 
 function draw() {
-
-    noFill();
-    strokeWeight(10)
-    stroke(mouseX,mouseY,0)
-
-    rect(50,50,mouseX,mouseY)
+/Users/asq 1/Downloads/Reset RoboFont 3.app/Contents/MacOS/Reset RoboFont
+    
 }
 
 function mousePressed() {
