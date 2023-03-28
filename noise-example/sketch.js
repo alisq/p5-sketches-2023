@@ -1,13 +1,4 @@
-let c;
-let ourFont;
-let profs = ["ali","diane","craig","nancy","roderick","sadie","richard"]
-console.log(profs)
-let points;
-
-
-function preload() {
-    ourFont = loadFont('AAHA.otf');
-}
+let f = 0;
 
 function setup() {
     c = createCanvas(1000,1000)
@@ -15,57 +6,20 @@ function setup() {
     
     colorMode(HSB,255);
 
-    textSize(100)
-    textFont(ourFont);
     
-    points = ourFont.textToPoints("GD2",100,600,600);
-
     noStroke();
-    
-
-
-
-    textSize(50)
     fill(0)
-    text("https://github.com/alisq/p5-sketches-2023",100,100)
-    
-
-
-    
-
 }
 
 function draw() {
+    f=f+0.01
 
-    
-    
-    
-    // noFill()
+    console.log(  )
+
+    background(255)
+        ellipse(200,200,random(400))
+
+        ellipse(600,200,noise(f)*400)
 
 
-    let ferb = map(mouseX, 0, 1000, 0, 255)
-    // strokeWeight(5)
-    fill(ferb,255,255)
-    // ellipse(mouseX,mouseY,50)
-    textSize(mouseY/10)
-    
-    
-    // let i = 0;
-    // while (i<profs.length) {
-    //     text(profs[i], 100,(100*i+100))
-
-    //     i=i+1;
-    // }
-
-    
-    for(let i=0; i<points.length; i++) {
-        fill(random(255),255,255)
-        rect(points[i].x+random(-5,5), points[i].y+random(-5,5),random(10,60))
-        
-    }
-    
-}
-
-function mousePressed() {
-    saveCanvas(c, "fresh-sketch", "png")
 }
